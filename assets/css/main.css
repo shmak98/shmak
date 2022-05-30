@@ -1,10 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic");
 @import url("fontawesome-all.min.css");
 
-/*
-	Astral by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
 html, body, div, span, applet, object,
@@ -57,7 +53,7 @@ body {
 
 mark {
 	background-color: transparent;
-	color: inherit;
+	color: #9c707e;
 }
 
 input::-moz-focus-inner {
@@ -80,6 +76,31 @@ input, select, textarea {
   position: relative;
   overflow: hidden;
   width: 100%;
+}
+/* Loader */
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 /* Row */
@@ -1561,9 +1582,10 @@ input, select, textarea {
 .container {
         position:relative;
         width: 65%;
+        margin: 0 auto;
     }
 
-	.image {
+        .image {
 		opacity: 1;
         display: block;
         width: 100%;
@@ -1584,23 +1606,22 @@ input, select, textarea {
           text-align: center;
        
     }
-    .container:hover .image {
+        .container:hover .image {
         opacity: 0.1;
     
     }
-    .container:hover .middle {
-        opacity: 0.5;
+        .container:hover .middle {
+        opacity: 0.8;
         
-    }.text {
+    }   .text {
           background-color: #845368;
-          position: absolute;
-          opacity: 5;
           color: white;
-          font-size: 15px;
-          padding: 16px 50px;
-
+          size: small;
+          position: center;
+            
+        
 }
-    .image img {
+        .image img {
 			display: block;
 			width: 100%;
 		}
@@ -2019,7 +2040,7 @@ input, select, textarea {
                 transition: opacity 0.25s ease-in-out;
                 margin-bottom: 0;
                 position: relative;
-                padding: 3.5em 2.5em 2.5em 2.5em;
+                padding: 2.5em 2.5em 2.5em 2.5em;
                 width: 100%;
 		}
 
@@ -2030,14 +2051,14 @@ input, select, textarea {
 			@media screen and (max-width: 736px) {
 
 				#main > .panel {
-					padding: 2em 1.5em 1.5em 1.5em;
+					padding: 1.5em 1.5em 1.5em 1.5em;
 				}
 
 			}
 
 			#main > .panel.intro {
 				padding: 0;
-				height: 20em;
+				height: 26em;
 				display: -moz-flex;
 				display: -webkit-flex;
 				display: -ms-flex;
@@ -2063,7 +2084,7 @@ input, select, textarea {
 					-webkit-flex-shrink: 0;
 					-ms-flex-shrink: 0;
 					flex-shrink: 0;
-					width: 17em;
+					width: 18em;
 					height: 100%;
 				}
 
@@ -2134,7 +2155,7 @@ input, select, textarea {
 					}
 
 				#main > .panel.intro header {
-					-moz-flex-grow: 1;
+					-moz-flex-grow: 1.5;
 					-webkit-flex-grow: 1;
 					-ms-flex-grow: 1;
 					flex-grow: 1;
@@ -2148,7 +2169,7 @@ input, select, textarea {
 				}
 
 					#main > .panel.intro header h1 {
-						line-height: 1.25em;
+						line-height: 1em;
 						margin-bottom: 0;
                         text-align: center;
 					}
@@ -2175,7 +2196,7 @@ input, select, textarea {
 						}
 
 						#main > .panel.intro header {
-							padding: 4em;
+							padding: 3em;
 							text-align: center;
 						}
 
